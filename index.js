@@ -5,9 +5,17 @@ import express from "express";
 
 import cors from "cors";
 
+import connected_db from "./db/data.js";
+
+import dotenv from 'dotenv';
+
 const app = express()
 
 app.use(cors())
+
+dotenv.config();
+
+connected_db()
 
 const fruit = ["apple", "banana", "mango"]
 
@@ -38,6 +46,15 @@ app.listen(3000, () => {
 
 
 })
+
+
+
+
+
+
+
+
+
 
 
 
