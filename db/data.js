@@ -13,7 +13,7 @@ const connected_db = async () => {
 
     try {
 
-     const connection_instance = mongoose.connect(`${process.env.MONGODB_URI}/${db_Name}`)
+     const connection_instance = await mongoose.connect(`${process.env.MONGODB_URI}/${db_Name}`)
 
 
      console.log(`\n mongodbconnected ho gya ${connection_instance}`)
@@ -38,5 +38,7 @@ const connected_db = async () => {
 
 
 export default connected_db
+
+
 
 

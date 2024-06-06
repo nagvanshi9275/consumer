@@ -1,6 +1,6 @@
 
 
-import User from "../models/user.models";
+import User from "../models/user.models.js";
 
 
 
@@ -9,7 +9,7 @@ export default async function Getuserdetail(req,  res) {
 
      try {
 
-      const user = User.find({})
+      const user = await User.find({})
 
       res.status(200).json(user)
 

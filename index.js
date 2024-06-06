@@ -9,9 +9,13 @@ import connected_db from "./db/data.js";
 
 import dotenv from 'dotenv';
 
+import router from "./Routes/user.routes.js";
+
 const app = express()
 
 app.use(cors())
+
+app.use(express.json());
 
 dotenv.config();
 
@@ -37,6 +41,8 @@ app.get('/jokes', (req, res) => {
 
 
 })
+
+app.use('/api', router)
 
 
 
