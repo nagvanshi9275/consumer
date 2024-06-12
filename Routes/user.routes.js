@@ -8,6 +8,8 @@
 
     import Getdata from "../controllors/getdata.controllor.js";
 
+     import Delete from "../controllors/delete.controllor.js";
+
     const router = express.Router()
 
 
@@ -15,7 +17,7 @@
 
      router.post('/getdata', Getdata)
 
-
+     router.post('/delete', Delete)
 
 
      export default router;

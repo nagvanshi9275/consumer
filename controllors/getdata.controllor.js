@@ -24,7 +24,9 @@ export default async function Getdata(req, res) {
 
     if(!userdata) return res.status(404).json({message: "userdata not found"})
 
-        res.status(200).json(userdata)
+     res.status(200).json(userdata)
+
+    //  userdata.message.splice(index, 1)
 
 
 
